@@ -2,11 +2,8 @@ require('dotenv').config();
 
 const fs = require('node:fs');
 const path = require('node:path');
-// const Discord = require("discord.js");
 const { Client, Events, Collection, GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
-// const { Client, Intents } = require("discord.js");
-// const client = new Discord.Client();
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -17,17 +14,6 @@ const client = new Client({
         GatewayIntentBits.MessageContent
     ]
 });
-
-// const client = new Client({ intents: [
-//     Intents.FLAGS.GUILDS, 
-//     Intents.FLAGS.GUILD_MESSAGES ] 
-// })
-
-// const { SlashCommandBuilder } = require('@discordjs/builders');
-
-// const data = new SlashCommandBuilder()
-// .setName('ping')
-// .setDescription('Replies with Pong!');
 
 client.on(
     Events.ClientReady, () => { console.log(`Logged in as ${client.user.tag}!`) }
@@ -67,21 +53,4 @@ client.on(Events.InteractionCreate, async interaction => {
 	}
 });
 
-// client.on(
-//     "messageCreate", msg => {
-//         if (msg.content.startsWith("-anon")) {
-//             msg.reply("pong");
-//         }
-//     }
-// )
-
-// client.on(Events.InteractionCreate, async interaction => {
-// 	if (!interaction.isChatInputCommand()) return;
-
-// 	if (interaction.commandName === 'ping') {
-// 		await interaction.reply({ content: 'Secret Pong!', ephemeral: true });
-// 	}
-// });
-
-// client.login(process.env.DISCORD_TOKEN);
 client.login(token);
