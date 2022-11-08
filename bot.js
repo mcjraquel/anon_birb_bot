@@ -12,7 +12,11 @@ const client = new Client({
         GatewayIntentBits.GuildMessageReactions,
         GatewayIntentBits.DirectMessages,
         GatewayIntentBits.MessageContent
-    ]
+    ],
+	connectionString: process.env.DATABASE_URL,
+	ssl: {
+		rejectUnauthorized:false
+	}
 });
 
 client.on(
