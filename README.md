@@ -3,4 +3,4 @@ A simple Discord bot for sending anonymous messages
 
 **This is a Discord bot I made for my friend's server that I am a part of. It enables the members to send anonymous messages.**
 
-Note: The bot token is changed for privacy.
+Note: The bot token was changed for privacy. This bot was not made for commercial purposes.
