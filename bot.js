@@ -13,10 +13,6 @@ const client = new Client({
         GatewayIntentBits.DirectMessages,
         GatewayIntentBits.MessageContent
     ],
-	connectionString: "postgres://oveusrigivkiit:6607c666e534f3358e5afab967dca5dd9a97608934791d441f3092c67398f79f@ec2-44-199-22-207.compute-1.amazonaws.com:5432/d7l9curhd9jtrs",
-	ssl: {
-		rejectUnauthorized:false
-	}
 });
 
 client.on(
